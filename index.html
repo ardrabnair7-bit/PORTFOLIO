@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ardra B Nair</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: linear-gradient(to right, #cfd5dc, #e0d2d2);
+      color: #030404;
+      padding-bottom: 60px;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      padding: 20px 40px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    
+      h1 { 
+      font-family: 'Pacifico';
+      font-size: 34px; 
+      letter-spacing: 2px; 
+      color: #282020; 
+    }
+
+    
+
+    .container {
+      margin-top: auto;
+      padding: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      transition: all 0.4s ease;
+    }
+
+    .card:hover { transform: translateY(-5px); }
+
+    h2 { border-bottom: 3px solid #041f3e; display: inline-block; margin-bottom: 15px; }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .skills span {
+      display: inline-block;
+      padding: 8px 15px;
+      margin: 5px;
+      background: #e9eef5;
+      border-radius: 20px;
+    }
+
+    ul { margin-left: 20px; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .socials {
+      margin-top: 20px;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      width: 50px;
+      height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      color: #fff;
+      font-size: 22px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      transform: scale(1.1);
+      background: #222;
+    }
+
+    .socials a:hover { color: #00aced; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ARDRA B NAIR</h1>
+</header>
+
+<div class="container">
+
+  <div class="card profile">
+    <img src="C:\Users\ACER\OneDrive\Desktop\personal\cv1.jpeg" alt="Profile Photo">
+    <div>
+      <h2>About Me</h2>
+      <p>I'm Ardra B. Nair, a motivated student who enjoys problem-solving and coding. I constantly research new technologies and transform concepts into workable solutions.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Python</span>
+      <span>Java</span>
+      <span>C++</span>
+      <span>HTML</span>
+      <span>JavaScript</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Education</h2>
+    <ul>
+      <li><a href="https://mariancollege.org/" target="_blank">Marian College Kuttikanam (BCA)</a></li>
+      <li><a href="https://mgmkuruppampady.org/" target="_blank">MGM Higher Secondary School, Kuruppampady</a></li>
+      <li><a href="#" target="_blank">Guardian Angel Higher Secondary School, Mannoor</a></li>
+      <li><a href="#" target="_blank">Amrita Vidyalayam, Perumbavoor</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="C:\Users\ACER\OneDrive\Desktop\personal\g2.jpeg" alt="Gallery Image">
+       <img src="C:\Users\ACER\OneDrive\Desktop\personal\g1.jpeg" alt="Gallery Image">
+       <img src="C:\Users\ACER\OneDrive\Desktop\personal\g3.jpeg" alt="Gallery Image">
+        <img src="C:\Users\ACER\OneDrive\Desktop\personal\g4.jpeg" alt="Gallery Image">
+         <img src="C:\Users\ACER\OneDrive\Desktop\personal\g5.jpeg" alt="Gallery Image">
+          <img src="C:\Users\ACER\OneDrive\Desktop\personal\g6.jpeg" alt="Gallery Image">
+    </div>
+  </div>
+
+</div>
+
+<div class="socials">
+    <a href="https://www.instagram.com/_ar_d_ra._/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/ardra-b-nair/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:ardrabnair7@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  });
+
+  cards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform = 'translateY(40px)';
+    observer.observe(card);
+  });
+</script>
+
+</body>
+</html>
